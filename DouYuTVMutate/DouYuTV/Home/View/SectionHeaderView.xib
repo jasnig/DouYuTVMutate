@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SectionHeaderView" customModule="DouYuTVMutate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-H3-PqZ">
+                    <rect key="frame" x="0.0" y="8" width="320" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-hF-m3j">
+                            <rect key="frame" x="43" y="11" width="34" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BI6-9Y-h1W">
+                            <rect key="frame" x="8" y="7" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="PbO-VT-UaZ"/>
+                                <constraint firstAttribute="height" constant="28" id="Vdn-SF-6KE"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-g4-X0d">
+                            <rect key="frame" x="284" y="7" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="TTI-gz-4KH"/>
+                                <constraint firstAttribute="width" constant="28" id="s3A-Sh-P4X"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ool-bF-hU0">
+                            <rect key="frame" x="246" y="6" width="30" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="更多">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="moreBtnOnClick:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="DSM-be-9uW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ool-bF-hU0" firstAttribute="centerY" secondItem="6jq-H3-PqZ" secondAttribute="centerY" id="7iT-Gs-qPG"/>
+                        <constraint firstItem="U1V-g4-X0d" firstAttribute="centerY" secondItem="6jq-H3-PqZ" secondAttribute="centerY" id="Dr0-uh-NqS"/>
+                        <constraint firstItem="YSI-hF-m3j" firstAttribute="centerY" secondItem="6jq-H3-PqZ" secondAttribute="centerY" id="EoD-KS-7qW"/>
+                        <constraint firstItem="BI6-9Y-h1W" firstAttribute="centerY" secondItem="6jq-H3-PqZ" secondAttribute="centerY" id="Tpi-PE-oQG"/>
+                        <constraint firstAttribute="trailing" secondItem="U1V-g4-X0d" secondAttribute="trailing" constant="8" id="f7n-RQ-Q0R"/>
+                        <constraint firstItem="U1V-g4-X0d" firstAttribute="leading" secondItem="ool-bF-hU0" secondAttribute="trailing" constant="8" id="miF-se-x2r"/>
+                        <constraint firstItem="BI6-9Y-h1W" firstAttribute="leading" secondItem="6jq-H3-PqZ" secondAttribute="leading" constant="8" id="pg2-Kx-FMO"/>
+                        <constraint firstItem="YSI-hF-m3j" firstAttribute="leading" secondItem="BI6-9Y-h1W" secondAttribute="trailing" constant="7" id="x6p-PT-sDF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6jq-H3-PqZ" secondAttribute="bottom" id="UBh-gR-CxQ"/>
+                <constraint firstItem="6jq-H3-PqZ" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Vgn-Zb-l8A"/>
+                <constraint firstAttribute="trailing" secondItem="6jq-H3-PqZ" secondAttribute="trailing" id="fgH-pO-Dxk"/>
+                <constraint firstItem="6jq-H3-PqZ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="hLo-vN-L3k"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="BI6-9Y-h1W" id="j5o-2l-Eiu"/>
+                <outlet property="typeLabel" destination="YSI-hF-m3j" id="RtB-rm-eHf"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

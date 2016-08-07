@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DouYuTVMutate.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4AC87C931D35E46E00DB0952</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4AC87CA71D35E46F00DB0952</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4AC87CB21D35E46F00DB0952</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

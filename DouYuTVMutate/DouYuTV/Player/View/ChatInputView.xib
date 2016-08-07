@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatInputView" customModule="DouYuTVMutate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="46"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5P8-CU-U5x">
+                    <rect key="frame" x="8" y="0.0" width="44" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="WEu-x3-fmr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="表情">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="emojiBtnOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="4WG-EM-M9d"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-hu-Dvj">
+                    <rect key="frame" x="62" y="8" width="122" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxf-EE-CbN">
+                    <rect key="frame" x="194" y="0.0" width="44" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="充值">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rechargeBtnOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="11m-1A-3oJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-MH-gjo">
+                    <rect key="frame" x="253" y="0.0" width="44" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="礼物">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendGiftBtnOnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="WNL-eK-6cB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5P8-CU-U5x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1va-Zc-v4X"/>
+                <constraint firstItem="jxf-EE-CbN" firstAttribute="top" secondItem="5P8-CU-U5x" secondAttribute="top" id="5hT-px-fkP"/>
+                <constraint firstItem="jxf-EE-CbN" firstAttribute="width" secondItem="5P8-CU-U5x" secondAttribute="width" id="5mG-Pq-3BW"/>
+                <constraint firstItem="CXM-MH-gjo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AqA-Xc-dgp"/>
+                <constraint firstAttribute="trailing" secondItem="CXM-MH-gjo" secondAttribute="trailing" constant="8" id="K9I-Sy-2MI"/>
+                <constraint firstItem="jxf-EE-CbN" firstAttribute="leading" secondItem="yoQ-hu-Dvj" secondAttribute="trailing" constant="10" id="LR0-yZ-Lwn"/>
+                <constraint firstItem="CXM-MH-gjo" firstAttribute="bottom" secondItem="5P8-CU-U5x" secondAttribute="bottom" id="Leh-CZ-5Ot"/>
+                <constraint firstAttribute="bottom" secondItem="CXM-MH-gjo" secondAttribute="bottom" id="Lua-yB-BOS"/>
+                <constraint firstItem="yoQ-hu-Dvj" firstAttribute="leading" secondItem="5P8-CU-U5x" secondAttribute="trailing" constant="10" id="Op9-Uz-1V7"/>
+                <constraint firstItem="5P8-CU-U5x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="OrP-jH-ER4"/>
+                <constraint firstAttribute="bottom" secondItem="yoQ-hu-Dvj" secondAttribute="bottom" constant="8" id="RIQ-l0-QeF"/>
+                <constraint firstItem="jxf-EE-CbN" firstAttribute="bottom" secondItem="5P8-CU-U5x" secondAttribute="bottom" id="U8i-gs-pWX"/>
+                <constraint firstItem="CXM-MH-gjo" firstAttribute="top" secondItem="5P8-CU-U5x" secondAttribute="top" id="aq6-q5-fVg"/>
+                <constraint firstItem="CXM-MH-gjo" firstAttribute="leading" secondItem="jxf-EE-CbN" secondAttribute="trailing" constant="15" id="j6Z-W6-GlM"/>
+                <constraint firstItem="yoQ-hu-Dvj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="kvd-FN-lOV"/>
+                <constraint firstItem="CXM-MH-gjo" firstAttribute="width" secondItem="5P8-CU-U5x" secondAttribute="width" id="mqQ-el-Y3n"/>
+                <constraint firstAttribute="bottom" secondItem="5P8-CU-U5x" secondAttribute="bottom" id="vQL-rp-1kl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AqA-Xc-dgp"/>
+                    <exclude reference="Lua-yB-BOS"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="inputTextField" destination="yoQ-hu-Dvj" id="ex2-NP-Xat"/>
+            </connections>
+            <point key="canvasLocation" x="159.5" y="239"/>
+        </view>
+    </objects>
+</document>
