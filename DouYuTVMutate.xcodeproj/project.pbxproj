@@ -96,6 +96,7 @@
 		4AECA1E51D571C4E00A866C0 /* AllListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AECA1E41D571C4E00A866C0 /* AllListViewModel.swift */; };
 		4AECA1E71D571FCB00A866C0 /* DetailColumnListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AECA1E61D571FCB00A866C0 /* DetailColumnListViewModel.swift */; };
 		4AECA1E81D57311700A866C0 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E26921D3E421200CF7AC6 /* movie.mp4 */; };
+		E8CA219B6F68D0F4E8F1C51D /* Pods_DouYuTVMutate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE10058CC543C01ECECC2943 /* Pods_DouYuTVMutate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CA219B6F68D0F4E8F1C51D /* Pods_DouYuTVMutate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
