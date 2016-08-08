@@ -80,6 +80,7 @@ class ProfileController: BaseViewController {
 
         })
 
+        
         let row3 = CellBuilder<TitleWithLeftImageCell>(dataModel: row3Data, cellDidClickAction: {[unowned self] in
             
             self.showViewController(SettingController(), sender: nil)
