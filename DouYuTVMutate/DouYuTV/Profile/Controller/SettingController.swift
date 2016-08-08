@@ -57,7 +57,7 @@ class SettingController: BaseViewController {
     
     
     func showHud() {
-        SimpleHUD.showHUD("未实现相关功能", autoHide: true, afterTime: 1.0)
+        EasyHUD.showHUD("未实现相关功能", autoHide: true, afterTime: 1.0)
 
     }
     

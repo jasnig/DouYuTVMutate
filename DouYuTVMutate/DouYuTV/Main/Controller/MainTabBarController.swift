@@ -12,7 +12,9 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        /// 设置子控制器
         setupChildVcs()
+        /// 设置item的字体颜色
         setTabBarItemColor()
     }
     

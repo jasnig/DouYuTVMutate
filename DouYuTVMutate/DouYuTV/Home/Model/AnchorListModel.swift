@@ -85,7 +85,6 @@ class TagModel: Mappable {
     required init?(_ map: Map) {
         
     }
-    
     init() {
         
     }

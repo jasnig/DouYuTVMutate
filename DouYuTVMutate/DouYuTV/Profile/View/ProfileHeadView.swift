@@ -14,6 +14,17 @@ class ProfileHeadView: UIView {
     @IBOutlet weak var btnContaierView: UIView!
     @IBOutlet weak var wantLiveBtn: UIButton!
     
+    var didTapImageViewHandler: ((imageView: UIImageView) -> Void)? {
+        didSet {
+            if didTapImageViewHandler != nil {
+                headImageView.userInteractionEnabled = true
+                let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapedImageView))
+                headImageView.addGestureRecognizer(tap)
+            }
+        }
+    }
+    
+    
     @IBAction func registBtnOnClick(sender: UIButton) {
     }
 
@@ -38,4 +49,7 @@ class ProfileHeadView: UIView {
         headImageView.zj_setCircleImage(UIImage(named: "2"))
     }
     
+    func tapedImageView() {
+        didTapImageViewHandler?(imageView: headImageView)
+    }
 }

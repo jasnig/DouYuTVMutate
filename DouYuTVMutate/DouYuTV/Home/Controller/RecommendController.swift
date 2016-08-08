@@ -144,6 +144,7 @@ class RecommendController: BaseViewController {
     }
     
     func bindToViewModel() {
+        /// 订阅viewModel的加载完成的信号, 来处理页面的刷新
         viewModel.isLoadFinished.subscribeNext { (finish) in
             if finish {
                 self.pptView.reloadData()

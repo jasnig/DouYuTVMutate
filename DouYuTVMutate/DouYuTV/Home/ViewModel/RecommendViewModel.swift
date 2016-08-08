@@ -23,7 +23,7 @@ class RecommendViewModel: BaseViewModel {
     private var dataVariable: Variable<[TagModel]?> = Variable(nil)
     
     override init() {
-        /// 两次请求都完成才标识结束
+        /// 两次请求都完成才标识结束 !!!! 强大的功能之一
         isLoadFinished = Observable.combineLatest(pptDataVariable.asObservable(), dataVariable.asObservable()) {ppt, data in
             return ppt != nil && data != nil
         }

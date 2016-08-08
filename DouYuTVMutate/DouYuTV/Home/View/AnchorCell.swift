@@ -28,8 +28,12 @@ class AnchorCell: UICollectionViewCell {
         // 设置默认图片
         imageView.zj_setCircleImage(UIImage(named: "2"), radius: 20.0)
         
+        
         if let data = model {
             
+            /// 使用分类来加载图片, 同时提供进度和加载完成后的handler, 在这个handler里可以处理请求完成的图片
+//            imageView.kf_setImageWithURL(NSURL(string: data.room_src)!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: nil)
+            /// 先下载载设置图片
             KingfisherManager.sharedManager.retrieveImageWithURL(NSURL(string: data.room_src)!, optionsInfo: nil, progressBlock: nil) {[weak self] (image, error, cacheType, imageURL) in
                 guard let validSelf = self where image != nil else {
                     return

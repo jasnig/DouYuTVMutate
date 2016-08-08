@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SimpleHUD: UIView {
+class EasyHUD: UIView {
     
     /// 加载错误提示
     private lazy var messageLabel: UILabel = {
@@ -41,7 +41,7 @@ class SimpleHUD: UIView {
     class func showHUD(text: String, autoHide: Bool, afterTime time: Double) {
         
         if let window = UIApplication.sharedApplication().keyWindow {
-            let hud = SimpleHUD(frame: CGRect(origin: CGPointZero, size: window.bounds.size))
+            let hud = EasyHUD(frame: CGRect(origin: CGPointZero, size: window.bounds.size))
             window.addSubview(hud)
             
             hud.messageLabel.text = text
@@ -53,7 +53,7 @@ class SimpleHUD: UIView {
             
             if autoHide {
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
-                    SimpleHUD.hideHUD()
+                    EasyHUD.hideHUD()
                     
                 })
             }
@@ -64,7 +64,7 @@ class SimpleHUD: UIView {
    class func hideHUD() {
         if let window = UIApplication.sharedApplication().keyWindow {
             for subview in window.subviews {
-                if subview is SimpleHUD {
+                if subview is EasyHUD {
                     subview.removeFromSuperview()
                 }
             }

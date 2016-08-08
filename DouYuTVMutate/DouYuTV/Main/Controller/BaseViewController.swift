@@ -9,7 +9,9 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    /// 用于RxSwift
     var disposeBag = DisposeBag()
+    /// 标记是否更新了布局
     private var didUpdateConstraints = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,7 @@ class BaseViewController: UIViewController {
 
     }
     
-    
+    /// 重写方法
     override func updateViewConstraints() {
         if !didUpdateConstraints {
             addConstraints()
@@ -26,8 +28,8 @@ class BaseViewController: UIViewController {
         }
         super.updateViewConstraints()
     }
-    
+    /// 子类重写, 用于添加自动布局
     func addConstraints() {
-        
+        /// default do nothing
     }
 }

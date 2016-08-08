@@ -11,7 +11,18 @@ import UIKit
 class ProfileController: BaseViewController {
 
     var delegator: CommonTableViewDelegator!
-    lazy var profileHeadView: ProfileHeadView = ProfileHeadView.LoadProfileHeadViewFormLib()
+    lazy var profileHeadView: ProfileHeadView =  {
+        let profileHeadView = ProfileHeadView.LoadProfileHeadViewFormLib()
+        profileHeadView.didTapImageViewHandler = {[weak self] imageView in
+            guard let `self` = self else { return }
+            /// 弹出图片浏览器
+            let photoModel = PhotoModel(localImage: imageView.image, sourceImageView: nil)
+            let photoBrowser = PhotoBrowser(photoModels: [photoModel])
+            photoBrowser.hideToolBar = true
+            photoBrowser.show(inVc: self, beginPage: 0)
+        }
+        return profileHeadView
+    }()
     var headView = UIView(frame: CGRect(x: 0, y: 0, width: Constant.screenWidth, height: 360))
     
     lazy var tableView: UITableView = {
@@ -55,16 +66,23 @@ class ProfileController: BaseViewController {
         let row4Data = TypedCellDataModel(name: "手游中心", iconName: "1", detailValue: "玩游戏领鱼丸")
 
         let row1 = CellBuilder<TitleWithLeftImageCell>(dataModel: row1Data, cellDidClickAction: {
-            SimpleHUD.showHUD("未实现相关功能", autoHide: true, afterTime: 1.0)
+            UsefulPickerView.showDatePicker(row1Data.name, doneAction: { (selectedDate) in
+                EasyHUD.showHUD("提示时间是---\(selectedDate)", autoHide: true, afterTime: 1.0)
+
+            })
         })
         let row2 = CellBuilder<TitleWithLeftImageCell>(dataModel: row2Data, cellDidClickAction: {
-            SimpleHUD.showHUD("未实现相关功能", autoHide: true, afterTime: 1.0)
+
+            UsefulPickerView.showSingleColPicker(row2Data.name, data: ["是", "否"], defaultSelectedIndex: 0, doneAction: { (selectedIndex, selectedValue) in
+                EasyHUD.showHUD("选择了---\(selectedValue)", autoHide: true, afterTime: 1.0)
+                
+            })
+
         })
 
         let row3 = CellBuilder<TitleWithLeftImageCell>(dataModel: row3Data, cellDidClickAction: {[unowned self] in
             
             self.showViewController(SettingController(), sender: nil)
-
             
         })
         
