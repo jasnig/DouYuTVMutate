@@ -73,10 +73,14 @@ class RecommendController: BaseViewController {
     /// 轮播图
     lazy var pptView: PPTView = {
 
-        let pptView = PPTView.PPTViewWithImagesCount {
+        let pptView = PPTView.PPTViewWithImagesCount {[weak self] in
+            guard let `self` = self else { return 0 }
+
             return self.viewModel.pptData.count
         }
-        .setupImageAndTitle({ (titleLabel, imageView, index) in
+        .setupImageAndTitle({[weak self] (titleLabel, imageView, index) in
+            guard let `self` = self else { return }
+
 //            let model = self.viewModel.pptData.value[index]
             let model = self.viewModel.pptData[index]
             titleLabel.textAlignment = .Left
@@ -85,7 +89,9 @@ class RecommendController: BaseViewController {
             imageView.kf_setImageWithURL(NSURL(string: model.pic_url), placeholderImage: UIImage(named: "1"))
             
         })
-        .setupPageDidClickAction({ (clickedIndex) in
+        .setupPageDidClickAction({[weak self] (clickedIndex) in
+            guard let `self` = self else { return }
+
             let playerVc = PlayerController()
             playerVc.title = "播放"
             playerVc.roomID = String(self.viewModel.pptData[clickedIndex].id)
