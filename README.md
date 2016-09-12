@@ -24,3 +24,8 @@
 ![douyu5.gif](http://upload-images.jianshu.io/upload_images/1271831-c191a51cff54ccbf.gif?imageMogr2/auto-orient/strip)
 
 ![douyu6.gif](http://upload-images.jianshu.io/upload_images/1271831-356c8d10bd6902ae.gif?imageMogr2/auto-orient/strip)
+
+
+
+####如果对你有帮助,请随手给个star 
+####如果你在使用中遇到问题: 可以联系我QQ: 854136959

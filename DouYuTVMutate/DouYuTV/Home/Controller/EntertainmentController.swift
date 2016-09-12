@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class EntertainmentController: BaseViewController {
     
     enum CellIdentifier: String {
@@ -77,6 +78,7 @@ class EntertainmentController: BaseViewController {
         view.addSubview(collectionView)
         
        addRefreshHeader()
+        
     }
     
     override func viewWillAppear(animated: Bool) {

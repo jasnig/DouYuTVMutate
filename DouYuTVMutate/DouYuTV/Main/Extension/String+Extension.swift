@@ -36,11 +36,12 @@ extension String {
             let MD5Calculator = MD5(Array(UnsafeBufferPointer(start: UnsafePointer<UInt8>(data.bytes), count: data.length)))
             let MD5Data = MD5Calculator.calculate()
             
-            let MD5String = NSMutableString()
+            var MD5String = ""
             for c in MD5Data {
-                MD5String.appendFormat("%02x", c)
+                MD5String += String(format: "%02x", c)
+//                MD5String.appendFormat("%02x", c)
             }
-            return MD5String as String
+            return MD5String
             
         } else {
             return self

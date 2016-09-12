@@ -85,6 +85,7 @@
 		4A0E7F4C1D55FB4B00195F39 /* ProfileHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E7EFD1D55FB4B00195F39 /* ProfileHeadView.swift */; };
 		4A0E7F4D1D55FB4B00195F39 /* ProfileHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E7EFE1D55FB4B00195F39 /* ProfileHeadView.xib */; };
 		4A0E7F4F1D55FC1D00195F39 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E7F4E1D55FC1D00195F39 /* RecommendViewModel.swift */; };
+		4A33866E1D5DBC8C00599441 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33866D1D5DBC8C00599441 /* UIButton+Extension.swift */; };
 		4A5647C31D364C1600E483DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5647C21D364C1600E483DF /* Assets.xcassets */; };
 		4AC87CA21D35E46E00DB0952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC87CA01D35E46E00DB0952 /* LaunchScreen.storyboard */; };
 		4AC87CAD1D35E46F00DB0952 /* DouYuTVMutateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC87CAC1D35E46F00DB0952 /* DouYuTVMutateTests.swift */; };
@@ -209,6 +210,7 @@
 		4A0E7EFD1D55FB4B00195F39 /* ProfileHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeadView.swift; sourceTree = "<group>"; };
 		4A0E7EFE1D55FB4B00195F39 /* ProfileHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeadView.xib; sourceTree = "<group>"; };
 		4A0E7F4E1D55FC1D00195F39 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		4A33866D1D5DBC8C00599441 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		4A5647C21D364C1600E483DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AC87C941D35E46E00DB0952 /* DouYuTVMutate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuTVMutate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC87CA11D35E46E00DB0952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				4A0E7EB71D55FB4B00195F39 /* UIImage+Extension.swift */,
 				4A0E7EB81D55FB4B00195F39 /* UIImageView+Extension.swift */,
 				4A0E7EB91D55FB4B00195F39 /* UIView+Extension.swift */,
+				4A33866D1D5DBC8C00599441 /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				4A0E7F0A1D55FB4B00195F39 /* GameCell.swift in Sources */,
 				4AECA21A1D5860F100A866C0 /* PickerView.swift in Sources */,
 				4A0E7F351D55FB4B00195F39 /* TitleWithSwitchCell.swift in Sources */,
+				4A33866E1D5DBC8C00599441 /* UIButton+Extension.swift in Sources */,
 				4A0E7F131D55FB4B00195F39 /* LiveColumnController.swift in Sources */,
 				4A0E7F3B1D55FB4B00195F39 /* NetworkTool.swift in Sources */,
 				4A0E7F1A1D55FB4B00195F39 /* UIImageView+Extension.swift in Sources */,
